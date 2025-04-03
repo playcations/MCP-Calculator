@@ -17,4 +17,4 @@ COPY calculator.py .
 EXPOSE 6277
 
 # Command to run the MCP server directly with the calculator module
-CMD ["python", "-m", "mcp.cmd.server", "--module", "calculator"]
+CMD ["mcp", "dev", "calculator.py"]
