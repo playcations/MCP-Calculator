@@ -4,17 +4,8 @@ A Python-based calculator service using MCP (Managed Compute Protocol) that prov
 
 ## Features
 
-- Basic arithmetic operations (add, subtract, multiply, divide)
-- Advanced mathematical functions:
-  - Power calculations
-  - Factorial
-  - Fibonacci sequence
-  - Prime number checking
-  - GCD and LCM
-  - Square root
-  - Logarithms
-  - Trigonometric functions
-- Numerical calculus operations
+tons of math from scipy and numpy
+
 
 ## Quick Start
 
@@ -38,8 +29,26 @@ docker run -p 6277:6277 calculator-service
 
 The service will be available on port 6277.
 
-## Project Structure
+## Claude Integration
 
-- `calculator.py` - Main calculator implementation with MCP tools
-- `Dockerfile` - Container configuration
-- `requirements.txt` - Python dependencies
+To use this calculator with Claude, add the following configuration to your Claude settings:
+
+```json
+{
+  "mcpServers": {
+    "calculatormcp": {
+      "command": "curl",
+      "args": [
+        "-s",
+        "-X",
+        "POST",
+        "-H",
+        "Content-Type: application/json",
+        "-d",
+        "@-",
+        "http://IP.ADDRESS:PORT"
+      ]
+    }
+  }
+}
+```
