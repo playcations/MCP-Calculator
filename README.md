@@ -16,15 +16,15 @@ A Python-based calculator service using MCP (Managed Compute Protocol) that prov
   - Trigonometric functions
 - Numerical calculus operations
 
-## Requirements
-
-- Docker
-- Python 3.12
-- MCP
-- NumPy
-- SciPy
-
 ## Quick Start
+
+You can run the calculator service directly from Docker Hub:
+
+```bash
+docker run -p 6277:6277 shooshmashta/calculatormcp:latest
+```
+
+Or build it locally:
 
 1. Build the Docker container:
 ```bash
