@@ -9,6 +9,26 @@ tons of math from scipy and numpy
 
 ## Quick Start
 
+### Local Server
+
+1. Install the required packages:
+```bash
+pip install -r requirements.txt
+```
+
+2. Install calculator.py to MCP
+```bash
+MCP install calculator.py
+'''
+
+3. run the server
+'''bash
+MCP dev calculator.py
+'''
+
+
+### Docker
+
 You can run the calculator service directly from Docker Hub:
 
 ```bash
